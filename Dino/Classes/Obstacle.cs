@@ -3,12 +3,12 @@ using System.Drawing;
 
 namespace Moon.Classes
 {
-    public class Cactus
+    public class Obstacle
     {
         public Transform transform;
         int srcX = 0;
 
-        public Cactus(PointF pos, Size size)
+        public Obstacle(PointF pos, Size size)
         {
             transform = new Transform(pos, size);
             ChooseRandomPic();

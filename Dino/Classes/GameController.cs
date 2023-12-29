@@ -9,7 +9,7 @@ namespace Moon.Classes
     {
         public static Image spritesheet;
         public static List<Road> roads;
-        public static List<Cactus> cactuses;
+        public static List<Obstacle> cactuses;
 
         public static int dangerSpawn = 10;
         public static int countDangerSpawn = 0;
@@ -18,7 +18,7 @@ namespace Moon.Classes
         public static void Init()
         {
             roads = new List<Road>();
-            cactuses = new List<Cactus>();
+            cactuses = new List<Obstacle>();
             spritesheet = Properties.Resources.sprite;
             GenerateRoad();
         }
@@ -60,7 +60,7 @@ namespace Moon.Classes
                 switch (obj)
                 {
                     case 0:
-                        Cactus cactus = new Cactus(new PointF(0 + 100 * 9, 150), new Size(50, 50));
+                        Obstacle cactus = new Obstacle(new PointF(0 + 100 * 9, 150), new Size(50, 50));
                         cactuses.Add(cactus);
                         break;
                 }
