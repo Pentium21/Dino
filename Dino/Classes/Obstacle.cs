@@ -3,6 +3,7 @@ using System.Drawing;
 
 namespace Moon.Classes
 {
+    [Serializable]
     public class Obstacle
     {
         public Transform transform;

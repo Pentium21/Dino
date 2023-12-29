@@ -1,7 +1,9 @@
-﻿using System.Drawing;
+﻿using System;
+using System.Drawing;
 
 namespace Moon.Classes
 {
+    [Serializable]
     public class Road
     {
         public Transform transform;

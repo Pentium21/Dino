@@ -86,5 +86,10 @@ namespace Dino
             player.DrawSprite(g);
             GameController.DrawObjets(g);
         }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

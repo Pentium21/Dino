@@ -3,6 +3,7 @@ using System.Drawing;
 
 namespace Moon.Classes
 {
+    [Serializable]
     public class Physics
     {
         public Transform transform;
@@ -11,14 +12,12 @@ namespace Moon.Classes
 
         public bool isJumping;
         public bool isCrouching;
-
         public Physics(PointF position, Size size)
         {
             transform = new Transform(position, size);
             gravity = 0;
             a = 0.4f;
             isJumping = false;
-            isCrouching = false;
         }
 
         public void ApplyPhysics()

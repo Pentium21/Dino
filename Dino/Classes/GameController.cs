@@ -1,11 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Drawing;
-using System.Windows.Forms.PropertyGridInternal;
 
 namespace Moon.Classes
 {
-    public static class GameController
+    [Serializable]
+    public class GameController
     {
         public static Image spritesheet;
         public static List<Road> roads;
