@@ -1,18 +1,15 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.Windows.Forms.PropertyGridInternal;
 
-namespace Dino.Classes
+namespace Moon.Classes
 {
     public static class GameController
     {
         public static Image spritesheet;
         public static List<Road> roads;
         public static List<Cactus> cactuses;
-        public static List<Bird> birds;
 
         public static int dangerSpawn = 10;
         public static int countDangerSpawn = 0;
@@ -21,7 +18,6 @@ namespace Dino.Classes
         public static void Init()
         {
             roads = new List<Road>();
-            birds = new List<Bird>();
             cactuses = new List<Cactus>();
             spritesheet = Properties.Resources.sprite;
             GenerateRoad();
@@ -46,14 +42,7 @@ namespace Dino.Classes
                     cactuses.RemoveAt(i);
                 }
             }
-            for (int i = 0; i < birds.Count; i++)
-            {
-                birds[i].transform.position.X -= 4;
-                if (birds[i].transform.position.X + birds[i].transform.size.Width < 0)
-                {
-                    birds.RemoveAt(i);
-                }
-            }
+
         }
 
         public static void GetNewRoad()
@@ -73,10 +62,6 @@ namespace Dino.Classes
                     case 0:
                         Cactus cactus = new Cactus(new PointF(0 + 100 * 9, 150), new Size(50, 50));
                         cactuses.Add(cactus);
-                        break;
-                    case 1:
-                        Bird bird = new Bird(new PointF(0 + 100 * 9, 110), new Size(50, 50));
-                        birds.Add(bird);
                         break;
                 }
             }
@@ -100,10 +85,6 @@ namespace Dino.Classes
             for (int i = 0; i < cactuses.Count; i++)
             {
                 cactuses[i].DrawSprite(g);
-            }
-            for (int i = 0; i < birds.Count; i++)
-            {
-                birds[i].DrawSprite(g);
             }
         }
     }

@@ -1,11 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-namespace Dino.Classes
+namespace Moon.Classes
 {
     public class Physics
     {
@@ -52,20 +48,6 @@ namespace Dino.Classes
                 if (Math.Abs(delta.X) <= transform.size.Width / 2 + cactus.transform.size.Width / 2)
                 {
                     if (Math.Abs(delta.Y) <= transform.size.Height / 2 + cactus.transform.size.Height / 2)
-                    {
-                        return true;
-                    }
-                }
-            }
-            for (int i = 0; i < GameController.birds.Count; i++)
-            {
-                var bird = GameController.birds[i];
-                PointF delta = new PointF();
-                delta.X = (transform.position.X + transform.size.Width / 2) - (bird.transform.position.X + bird.transform.size.Width / 2);
-                delta.Y = (transform.position.Y + transform.size.Height / 2) - (bird.transform.position.Y + bird.transform.size.Height / 2);
-                if (Math.Abs(delta.X) <= transform.size.Width / 2 + bird.transform.size.Width / 2)
-                {
-                    if (Math.Abs(delta.Y) <= transform.size.Height / 2 + bird.transform.size.Height / 2)
                     {
                         return true;
                     }

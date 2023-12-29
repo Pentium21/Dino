@@ -1,18 +1,14 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-namespace Dino.Classes
+namespace Moon.Classes
 {
     public class Cactus
     {
         public Transform transform;
         int srcX = 0;
 
-        public Cactus(PointF pos,Size size)
+        public Cactus(PointF pos, Size size)
         {
             transform = new Transform(pos, size);
             ChooseRandomPic();

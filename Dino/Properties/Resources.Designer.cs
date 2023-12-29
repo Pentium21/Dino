@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Dino.Properties {
+namespace Moon.Properties {
     using System;
     
     
